@@ -58,9 +58,6 @@ class HomeTabs {
     );
 
     // _controller.animation.addListener(() {
-    //   if(!_controller.indexIsChanging){
-
-    //   }
     //   _actionDispatcher(_tabPages[_controller.index].type);
 
     //   print('indexIsChanging: ' +
@@ -86,18 +83,18 @@ class HomeTabs {
     //       _controller.index.toString());
     // });
 
-    // _controller.addListener(() {
-    //   _actionDispatcher(_tabPages[_controller.index].type);
+    _controller.addListener(() {
+      _actionDispatcher(_tabPages[_controller.index].type);
 
-    //   print('indexIsChanging: ' +
-    //       _controller.indexIsChanging.toString() +
-    //       ', ' +
-    //       _controller.animation.status.toString() +
-    //       ': ' +
-    //       _controller.previousIndex.toString() +
-    //       ' => ' +
-    //       _controller.index.toString());
-    // });
+      print('indexIsChanging: ' +
+          _controller.indexIsChanging.toString() +
+          ', ' +
+          _controller.animation.status.toString() +
+          ': ' +
+          _controller.previousIndex.toString() +
+          ' => ' +
+          _controller.index.toString());
+    });
 
     bar = new TabBar(
       tabs: _tabPages.map((TabPage tabPage) => tabPage.title).toList(),
